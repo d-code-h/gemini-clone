@@ -4,6 +4,27 @@ import { Context } from '../../context/Context';
 import './Main.css';
 import { ContextType } from '../../lib/types';
 
+const data = {
+  cards: [
+    {
+      text: 'Suggest beatiful places to see on an upcoming road trip',
+      icon: assets.compass_icon,
+    },
+    {
+      text: 'Briefly summarize this concept: urban planning',
+      icon: assets.bulb_icon,
+    },
+    {
+      text: 'Brainstorm team bonding activities for our work retreat',
+      icon: assets.message_icon,
+    },
+    {
+      text: 'Improve the readability of the following code',
+      icon: assets.code_icon,
+    },
+  ],
+};
+
 export default function Main() {
   const {
     onSent,
@@ -14,7 +35,6 @@ export default function Main() {
     input,
     setInput,
   } = useContext(Context) as ContextType;
-  if (!onSent) return;
 
   return (
     <div className="main">
@@ -32,22 +52,12 @@ export default function Main() {
               <p>How can I help you today?</p>
             </div>
             <div className="cards">
-              <div className="card">
-                <p>Suggest beatiful places to see on an upcoming road trip</p>
-                <img src={assets.compass_icon} alt="" />
-              </div>
-              <div className="card">
-                <p>Briefly summarize this concept: urban planning</p>
-                <img src={assets.bulb_icon} alt="" />
-              </div>
-              <div className="card">
-                <p>Brainstorm team bonding activities for our work retreat</p>
-                <img src={assets.message_icon} alt="" />
-              </div>
-              <div className="card">
-                <p>Improve the readability of the following code</p>
-                <img src={assets.code_icon} alt="" />
-              </div>
+              {data.cards.map(({ text, icon }) => (
+                <div key={text} className="card">
+                  <p>{text}</p>
+                  <img src={icon} alt="" />
+                </div>
+              ))}
             </div>
           </>
         ) : (
@@ -66,7 +76,6 @@ export default function Main() {
                 </div>
               ) : (
                 <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
-                // <p>{resultData}</p>
               )}
             </div>
           </div>
