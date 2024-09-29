@@ -53,7 +53,7 @@ export default function Main() {
             </div>
             <div className="cards">
               {data.cards.map(({ text, icon }) => (
-                <div key={text} className="card">
+                <div key={text} className="card" onClick={() => onSent(text)}>
                   <p>{text}</p>
                   <img src={icon} alt="" />
                 </div>
