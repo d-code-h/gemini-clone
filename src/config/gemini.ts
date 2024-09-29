@@ -4,11 +4,7 @@
  * $ npm install @google/generative-ai
  */
 
-import {
-  GoogleGenerativeAI,
-  // HarmCategory,
-  // HarmBlockThreshold,
-} from '@google/generative-ai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
@@ -34,7 +30,8 @@ async function run(prompt: string) {
   });
 
   const result = await chatSession.sendMessage(prompt);
-  console.log(result.response.text());
+
+  return result.response.text();
 }
 
 export default run;
