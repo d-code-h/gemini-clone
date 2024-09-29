@@ -86,7 +86,7 @@ In the project directory, you can run the following scripts using pnpm:
 
 The project structure is as follows:
 
-gemini-clone/
+```gemini-clone/
 ├── public/ # Static assets
 ├── src/
 │ ├── assets/ # Icons, images, and static assets
@@ -103,6 +103,7 @@ gemini-clone/
 ├── package.json # Project dependencies and scripts
 ├── pnpm-lock.yaml # pnpm lockfile for package management
 └── README.md # Project documentation
+```
 
 ## Contributing
 
