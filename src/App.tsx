@@ -1,4 +1,3 @@
-import './App.css';
 import Main from './components/main/Main';
 import Sidebar from './components/sidebar/Sidebar';
 import ContextProvider from './context/Context';
