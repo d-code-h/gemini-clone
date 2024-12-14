@@ -4,26 +4,24 @@ import { Context } from '../../context/Context';
 import './Main.css';
 import { ContextType } from '../../lib/types';
 
-const data = {
-  cards: [
-    {
-      text: 'Suggest beatiful places to see on an upcoming road trip',
-      icon: assets.compass_icon,
-    },
-    {
-      text: 'Briefly summarize this concept: urban planning',
-      icon: assets.bulb_icon,
-    },
-    {
-      text: 'Brainstorm team bonding activities for our work retreat',
-      icon: assets.message_icon,
-    },
-    {
-      text: 'Improve the readability of the following code',
-      icon: assets.code_icon,
-    },
-  ],
-};
+const cards = [
+  {
+    text: 'Suggest beatiful places to see on an upcoming road trip',
+    icon: assets.compass_icon,
+  },
+  {
+    text: 'Briefly summarize this concept: urban planning',
+    icon: assets.bulb_icon,
+  },
+  {
+    text: 'Brainstorm team bonding activities for our work retreat',
+    icon: assets.message_icon,
+  },
+  {
+    text: 'Improve the readability of the following code',
+    icon: assets.code_icon,
+  },
+];
 
 export default function Main() {
   const {
@@ -40,7 +38,7 @@ export default function Main() {
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
-        <img src={assets.user_icon} alt="" />
+        <img src={assets.user_icon} alt="Profile picture" />
       </div>
       <div className="main-container">
         {!showResult ? (
@@ -52,7 +50,7 @@ export default function Main() {
               <p>How can I help you today?</p>
             </div>
             <div className="cards">
-              {data.cards.map(({ text, icon }) => (
+              {cards.map(({ text, icon }) => (
                 <div key={text} className="card" onClick={() => onSent(text)}>
                   <p>{text}</p>
                   <img src={icon} alt="" />

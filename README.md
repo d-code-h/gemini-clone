@@ -15,7 +15,7 @@ A clone of the Gemini app, built using React.js, TypeScript, and Vite. The app p
   - [Available Scripts](#available-scripts)
   - [Project Structure](#project-structure)
   - [Contributing](#contributing)
-  - [License](#license)
+  - [License ](#license-)
 
 ## Demo
 
@@ -115,6 +115,7 @@ If you'd like to contribute to this project, feel free to submit issues or pull 
 - Push the branch to your fork (git push origin feature-name).
 - Open a pull request.
 
-## License
+## License ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+details.
